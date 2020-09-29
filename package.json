@@ -3,11 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@8base/app-provider": "^0.37.2",
+    "@8base/auth": "^1.4.0",
+    "@auth0/auth0-react": "^1.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.3.0",
+    "graphql-request": "^3.1.0",
+    "graphql-tag": "^2.11.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

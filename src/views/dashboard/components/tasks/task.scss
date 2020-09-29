@@ -1,0 +1,23 @@
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .custom-control-input:checked~.custom-control-label::before {
+        color: #fff;
+        border-color: #4dbb4d;
+        background-color: #4dbb4d;
+    }
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    &.finish{
+        background-color: rgb(77, 187, 77);
+    }
+    &.not_finish{
+        background-color: rgb(187, 77, 77);
+    }
+}
+
