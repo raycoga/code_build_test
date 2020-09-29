@@ -1,6 +1,6 @@
 
 import gql from "graphql-tag";
-
+/* Query que obtiene todas las task */
 const ALL_TASK = gql`
   query {
     tasksList {
@@ -18,6 +18,7 @@ const ALL_TASK = gql`
     }
   }
 `;
+/* Query que obtiene una lista de los programadores */
 const ALL_PROGRAMADORES = gql`
   query{
   programadoresList {
@@ -29,6 +30,7 @@ const ALL_PROGRAMADORES = gql`
     }
 }
 `;
+/* Query que crea una task */
 const CREATE_TASK= gql`
  mutation taskCreate($nombre: String!,$descripcion: String!,$programadores:  ID!) {
   taskCreate(data:{
@@ -46,7 +48,7 @@ const CREATE_TASK= gql`
         }
     }
 `;
-
+/* Query que actualiza una task */
 const UPDATE_TASK=gql`
 mutation taskUpdate($id: ID!, $nombre: String!,$descripcion: String!,$programadores:  ID!) {
   taskUpdate(data:{
@@ -65,7 +67,7 @@ mutation taskUpdate($id: ID!, $nombre: String!,$descripcion: String!,$programado
         }
     }
 `
-
+/* Query que actualiza el estado de una task */
 const UPDATE_STATE=gql`
 mutation taskUpdate($id: ID!,$culminada:Boolean!) {
   taskUpdate(data:{
@@ -77,7 +79,7 @@ mutation taskUpdate($id: ID!,$culminada:Boolean!) {
         }
     }
 `
-
+/* Query que elimina la task */
 const DELETE_TASK= gql`
  mutation taskDelete($id: ID!) {
   taskDelete(data:{
@@ -88,18 +90,5 @@ const DELETE_TASK= gql`
         }
     }
 `;
-
-/* const CREATE_USER = gql`
-mutation programadoreCreate($nombre: String!) {
-  programadoreCreate(data:{
-    nombre: $nombre, 
-    }) 
-       {
-           success
-       }
-   }
-`; */
-
-
 
 export {ALL_TASK,ALL_PROGRAMADORES,CREATE_TASK,UPDATE_TASK,DELETE_TASK,UPDATE_STATE}

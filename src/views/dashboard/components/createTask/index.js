@@ -37,7 +37,7 @@ const index = memo(({ data,editButton, SendingData, setSendingData, ENDPOINT,pro
    // eslint-disable-next-line
   }, [programmers]);
 
-
+/* Esta funcion se encarga de crear un tarea, dependiendo de si es llamada del modal o del componente principal, el realizara una peticion u otra */
   const crearTarea = (e) => {
     e.preventDefault();
       if (

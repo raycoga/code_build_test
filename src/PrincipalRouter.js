@@ -11,9 +11,8 @@ import PrivateRoute from "./components/privateRoute";
 import Home from "./views/Home";
 import Dashboard from "./views/dashboard";
 
-
 const PrincipalRotuter = () => {
-  const { isLoading} = useAuth0();
+  const {isLoading} = useAuth0();
 
   if (isLoading) {
     return <Spinner/>;
